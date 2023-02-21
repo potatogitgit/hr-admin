@@ -3,7 +3,7 @@ import './App.css';
 import io from 'socket.io-client'
 
 <script src="/socket.io/socket.io.js" />
-const socket = io.connect("https://hr-server-dun.vercel.app")
+const socket = io.connect("https://hr-admin-xi.vercel.app/")
 function App() {
 
 
