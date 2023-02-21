@@ -3,7 +3,7 @@ import './App.css';
 import io from 'socket.io-client'
 
 <script src="https://6a68-130-105-185-166.ap.ngrok.io/socket.io/socket.io.js" />
-const socket = io.connect("https://hr-admin-xi.vercel.app")
+const socket = io.connect("https://6a68-130-105-185-166.ap.ngrok.io")
 function App() {
 
 
