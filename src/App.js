@@ -26,7 +26,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={passData}> Test </button>
+        <button onClick={passData}> Click me </button>
       </header>
     </div>
   );
