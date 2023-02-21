@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import io from 'socket.io-client'
 
-<script src="https://hr-admin-xi.vercel.app/socket.io/socket.io.js" />
+<script src="/socket.io/socket.io.js" />
 const socket = io.connect("https://hr-admin-xi.vercel.app")
 function App() {
 
