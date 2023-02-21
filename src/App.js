@@ -1,7 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import io from 'socket.io-client'
 
+<script src="http://localhost:3007/socket.io/socket.io.js" />
+const socket = io.connect("http://localhost:5000")
 function App() {
+
+
+  const passData = () => {
+    socket.emit("test", { "name": "Pogi", "age": 27 })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +26,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={passData}> Test </button>
       </header>
     </div>
   );
