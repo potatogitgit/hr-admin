@@ -5,12 +5,11 @@ import { useState } from 'react'
 
 <script src="/socket.io/socket.io.js" />
 const socket = io.connect("https://hr-server.onrender.com")
-
+//const socket = io.connect("http://localhost:5000")
 
 
 function App() {
 
-  const [test, setTest] = useState()
 
   const passData = () => {
     //socket.emit("test", { "name": "Pogi", "age": 27 })
