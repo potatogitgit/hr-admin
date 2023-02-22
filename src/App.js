@@ -43,7 +43,7 @@ function App() {
           Learn React
         </a>
         <p> Test:</p>
-        <input type={text} name="message" onChange={(e) => setMsg(e.target.value)}></input>
+        <input type={"text"} name="message" value={msg} onChange={(e) => setMsg(e.target.value)}></input>
         <button onClick={passData}> Click me </button>
         <button onClick={passDataTest}> Test </button>
       </header>
