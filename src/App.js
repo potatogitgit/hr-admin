@@ -8,7 +8,8 @@ function App() {
 
 
   const passData = () => {
-    socket.emit("test", { "name": "Pogi", "age": 27 })
+    //socket.emit("test", { "name": "Pogi", "age": 27 })
+    socket.emit("test", "working")
   }
 
   return (
