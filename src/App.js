@@ -10,6 +10,8 @@ const socket = io.connect("https://hr-server.onrender.com")
 
 function App() {
 
+  const [msg, setMsg] = useState("")
+
 
   const passData = () => {
     //socket.emit("test", { "name": "Pogi", "age": 27 })
@@ -18,10 +20,10 @@ function App() {
 
   }
 
-  const passDataTest = () => {
+  const passDataTest = (e) => {
     //socket.emit("test", { "name": "Pogi", "age": 27 })
     //socket.emit("test", "working")
-    socket.emit("test", "test")
+    socket.emit("test", msg)
 
   }
 
@@ -41,6 +43,7 @@ function App() {
           Learn React
         </a>
         <p> Test:</p>
+        <input type={text} name="message" onChange={(e) => setMsg(e.target.value)}></input>
         <button onClick={passData}> Click me </button>
         <button onClick={passDataTest}> Test </button>
       </header>
