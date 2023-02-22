@@ -11,19 +11,19 @@ const socket = io.connect("https://hr-server.onrender.com")
 function App() {
 
   const [msg, setMsg] = useState("")
+  const [site, setSite] = useState("")
 
+  // const passData = () => {
+  //   //socket.emit("test", { "name": "Pogi", "age": 27 })
+  //   //socket.emit("test", "working")
+  //   socket.emit("test", "hello")
 
-  const passData = () => {
-    //socket.emit("test", { "name": "Pogi", "age": 27 })
-    //socket.emit("test", "working")
-    socket.emit("test", "hello")
-
-  }
+  // }
 
   const passDataTest = (e) => {
     //socket.emit("test", { "name": "Pogi", "age": 27 })
     //socket.emit("test", "working")
-    socket.emit("test", msg)
+    socket.emit("test", { "msg": msg, "site": site })
 
   }
 
@@ -43,8 +43,9 @@ function App() {
           Learn React
         </a>
         <p> Test:</p>
+        <input type={"text"} name="site" value={site} onChange={(e) => setSite(e.target.value)}></input>
         <input type={"text"} name="message" value={msg} onChange={(e) => setMsg(e.target.value)}></input>
-        <button onClick={passData}> Click me </button>
+        {/* <button onClick={passData}> Click me </button> */}
         <button onClick={passDataTest}> Test </button>
       </header>
     </div>
