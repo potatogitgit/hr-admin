@@ -19,6 +19,13 @@ function App() {
 
   }
 
+  const passDataTest = () => {
+    //socket.emit("test", { "name": "Pogi", "age": 27 })
+    //socket.emit("test", "working")
+    socket.emit("test", "test")
+
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -36,6 +43,7 @@ function App() {
         </a>
         <p> Test:</p>
         <button onClick={passData}> Click me </button>
+        <button onClick={passDataTest}> Test </button>
       </header>
     </div>
   );
