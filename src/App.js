@@ -17,10 +17,6 @@ function App() {
     //socket.emit("test", "working")
     socket.emit("test", "hello")
 
-    socket.on("fromserver", function (msg) {
-      alert(msg)
-    })
-
   }
 
   return (
